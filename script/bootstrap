@@ -1,0 +1,6 @@
+#!/bin/bash
+
+set -eu
+
+pushd assets && npm install && popd
+mix do deps.get, deps.compile, compile, ecto.setup
