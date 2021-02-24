@@ -38,6 +38,7 @@ Copy the `.devcontainer` directory to your own project. You'll likely want to mo
 - The PostgreSQL server started does _not_ have a volume mounted for persistence. You'll want to modify the `.devcontainer/docker-compose.yml` file accordingly (using [`volumes`](https://docs.docker.com/compose/compose-file/compose-file-v3/#volumes) to mount a directory at `/var/lib/postgresql/data`, most likely).
 - The `.devcontainer/Dockerfile` currently uses the latest official image (`elixir:latest`) and installs v15.x of NodeJS (for asset installation). This could be modified to be more flexible.
 - The configuration doesn't currently install any useful VSCode extensions for you (such as ElixirLS).
+- Uses the container's `root` user vs `vscode` or another non-root user.
 
 ## Contributing
 
